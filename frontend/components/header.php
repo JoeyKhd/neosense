@@ -31,7 +31,7 @@
 <nav class="navbar is-transparent shadow-border-bottom">
     <div class="navbar-brand">
         <a class="navbar-item" href="./index.php">
-            <img src="/img/logo.png" alt="logo-neosense">
+            <img src="./img/logo.png" alt="logo-neosense">
         </a>
         <div class="navbar-burger burger" data-target="navbarMobile">
             <span></span>
