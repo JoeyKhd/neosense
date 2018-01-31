@@ -7,4 +7,6 @@ The smart contract is explained in this tutorial (NEO Amsterdam Developer Worksh
 
 **Make a decent PR to join the Neosense team for the CoZ & Microsoft NEO dApp competition!**
 
+### Including PHP frontend.
+
 ##Usage
