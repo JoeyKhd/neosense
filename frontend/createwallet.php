@@ -36,7 +36,7 @@ $neo->setNode( "http://seed5.neo.org:10332" );
 
 
 //New wallet
-$newWallet = new NeoPHP\NeoWallet();
+//$newWallet = new NeoPHP\NeoWallet();
 //print_r([
 //"isNEP2" => (($newWallet->isNEP2()) ? "🔒" : "🚫" . '<br>'),
 //"wif" => $newWallet->getWif() . '<br>',
@@ -44,6 +44,13 @@ $newWallet = new NeoPHP\NeoWallet();
 //"PRIVATE KEY" => $newWallet->getPrivateKey() . '<br>',
 //"PUBLIC_KEY" => $newWallet->getPublicKey()
 //]);
+
+
+
+if ( isset( $_POST ['submit'] ) ) {
+    echo 'hi';
+}
+
 
 ?>
 
@@ -54,7 +61,7 @@ $newWallet = new NeoPHP\NeoWallet();
             $(".modal").addClass("is-active");
         });
 
-        $("#close-modal").click(function () {
+        $(".close-modal").click(function () {
             $(".modal").removeClass("is-active");
         });
 
@@ -102,9 +109,10 @@ $newWallet = new NeoPHP\NeoWallet();
                 <div class="field">
 
                     <div class="field">
+                        <form method="post">
                         <label class="label">Enter a Password</label>
                         <div class="control has-icons-right">
-                            <input class="input has-text-centered" type="password" placeholder="Keep your password SAFE">
+                            <input class="input has-text-centered" type="password" name="password" placeholder="Keep your password SAFE">
 
                             <span class="icon is-small is-right" id="showpassword">
       <i class="fas fa-eye" id="passwordIcon"></i>
@@ -134,39 +142,28 @@ $newWallet = new NeoPHP\NeoWallet();
                 <div class="modal-card">
                     <header class="modal-card-head">
                         <p class="modal-card-title">Notice</p>
-                        <button class="delete" id="close-modal" aria-label="close"></button>
+                        <button class="delete close-modal" aria-label="close"></button>
                     </header>
                     <section class="modal-card-body">
-                        <!-- Content ... -->
+                        Watch out! Pirates ahead! ** DUMMY TEXT **
                     </section>
                     <footer class="modal-card-foot">
-                        <button class="button is-success">I am sure!</button>
-                        <button class="button">Cancel</button>
+                        <button class="button is-success" formaction="createdwallet.php" name="submit" type="submit">I am sure!</button>
+                        <button class="button close-modal">Cancel</button>
                     </footer>
                 </div>
             </div>
-
+            </form>
 
                         <div class="has-text-centered">
                             Your address: <br><strong>
-			<?php print_r( $newWallet->getAddress() ); ?></strong> <br>
+<!--			--><?php //print_r( $newWallet->getAddress() ); ?><!--</strong> <br>-->
                             Your private key: <strong>
-			<?php print_r( $newWallet->getPrivateKey() ); ?></strong><br>
+<!--			--><?php //print_r( $newWallet->getPrivateKey() ); ?><!--</strong><br>-->
                         </div>
                         <br>
                         Note: NEVER share your private key with anyone.
                         <a href="paperwallet.php">Print Paper Wallet</a>
-        </div>
-    </div>
-
-
-    <div class="container">
-        <div class="row">
-            <h2 class="col-12">Toggle Password Visibility</h2>
-            <div class="input-group col-7 my-4">
-                <input type="password" id="password_input" class="form-control" placeholder="password" aria-label="Username" aria-describedby="password_visibility">
-                <button class="input-group-addon fa fa-eye btn btn-primary btn-sm bg-primary text-white" id="password_visibility"></button>
-            </div>
         </div>
     </div>
 
