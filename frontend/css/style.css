@@ -1,0 +1,54 @@
+.landing-background {
+    background-image: url(/img/background.png);
+    background-size: cover;
+}
+
+.icon {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 1.5rem;
+    width: auto;
+}
+
+.shadow-border-bottom {
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 10px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+.button.is-neo {
+    background-color: #58bf01;
+    border-color: transparent;
+    color: #fff;
+}
+
+a.navbar-item.is-active, a.navbar-item:hover, a.navbar-link.is-active, a.navbar-link:hover {
+    background-color: #f5f5f5;
+    color: #58bf01  ;
+}
+
+.border-top {
+    border-top: 1px #ebebeb solid;
+    padding-top: 0.75rem;
+}
+
+.border-paper {
+    border-left: 2px #bbbbbb dotted;
+    border-right: 2px #bbbbbb dotted;
+}
+
+.rotate-90 {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+}
+
+.control.has-icons-left .icon, .control.has-icons-right .icon {
+     pointer-events: all;
+}
