@@ -16,30 +16,44 @@
     }
 </script>
 
-<div class="column is-6 is-offset-3 has-text-centered">
+<div class="column is-12 has-text-centered">
     <div class="columns message-body">
         <div class="column is-4">
-                WALLET ADDRESS
-                <img src="/img/qr1.jpg">
-            AXp8p3zpLU3eUJQoBaXFZ5GX9pgiy9A4W1
+            <strong>WALLET ADDRESS</strong>
 
+            <div class="column">
+                <img style="width:50%" src="./img/qr1.jpg">
+            </div>
         </div>
         <div class="column is-4 border-paper">
-            <img src="img/logo.png">
-            <br>
-            PAPER WALLET
-            <br>
-            <i class="fas fa-5x fa-exclamation-triangle"></i>
-            <br>
-            <strong>STORE SAFE</strong>
-
+            <div class="column">
+                <img src="img/logo.png">
+                <br>
+                PAPER WALLET
+                <br>
+                <i class="fas fa-5x fa-exclamation-triangle"></i>
+                <br>
+                <strong>STORE SAFE</strong>
+            </div>
         </div>
-        <div class="column is-4">PRIVATE KEY
-            <img src="/img/qr2.jpg">
-            Kz6Ah4nhinKpcAwaN4xcbbWzMfVpH2oAGQjbEFPHrmLkVeWrkLgm
+        <div class="column is-4">
+            <strong>PRIVATE KEY</strong>
+            <div class="column">
+                <img style="width:50%" src="./img/qr1.jpg">
+            </div>
         </div>
+    </div>
+    <div class="column">
+        Wallet Address -> AXp8p3zpLU3eUJQoBaXFZ5GX9pgiy9A4W1
+    </div>
+    <div class="column">
+        Private Key -> AXp8p3zpLU3eUJQoBaXFZ5GX9pgiy9A4W1
     </div>
 
     <a class="button is-info printbutton" onclick="print()"><i class="fas fa-print"></i></a>
 
+
 </div>
+
+<!--LOWER PART OF THE PAPERWALLET-->
+
