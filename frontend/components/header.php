@@ -1,3 +1,21 @@
+<?php
+
+function _require_all( $dir ) {
+	// require all php files
+	$scan = glob( "$dir/*" );
+	foreach ( $scan as $path ) {
+		if ( preg_match( '/\.php$/', $path ) ) {
+			require_once $path;
+		} elseif ( is_dir( $path ) ) {
+			_require_all( $path );
+		}
+	}
+}
+
+_require_all( "./src/" );
+
+?>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 
 <script>

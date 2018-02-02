@@ -1,3 +1,13 @@
+<?php
+
+use NeoPHP\NeoRPC;
+
+$neo = new NeoRPC();
+$neo->setNode("http://seed5.neo.org:10332");
+
+
+?>
+
 <footer class="footer is-dark">
     <div class="container">
         <div class="columns">

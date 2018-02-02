@@ -10,22 +10,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
-<?php include_once( 'components/header.php' ); ?>
-
-<?php
-function _require_all( $dir ) {
-	// require all php files
-	$scan = glob( "$dir/*" );
-	foreach ( $scan as $path ) {
-		if ( preg_match( '/\.php$/', $path ) ) {
-			require_once $path;
-		} elseif ( is_dir( $path ) ) {
-			_require_all( $path );
-		}
-	}
-}
-
-_require_all( "./src/" );
+<?php include_once( 'components/header.php' );
 
 use NeoPHP\NeoRPC;
 use NeoPHP\NeoWallet;
